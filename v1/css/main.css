@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+}
 .grid-container {
   display: grid;
   height: 100vh;
@@ -28,8 +34,77 @@ nav a:hover {
 }
 
 .opening-welcome {
-  background: green;
+  /* background: green; */
   grid-area: welcome;
+  font-family:roboto;
+
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 2fr 2 fr;
+  grid-template-areas:
+    ". . . . ."
+    ". headshot outer outer ."
+    ". . . . .";
+  grid-gap: 0rem;
+}
+
+#headshot{
+  grid-area: headshot;
+}
+#headshot img {
+  width: 270px;
+  height: 270px;
+}
+
+.outer{
+  position: relative;
+  margin-top: 75px;
+  margin-left: 25px;
+  grid-area: outer;
+}
+
+.outer h1 { font-size: 55px;}
+
+.inner {
+  position: absolute;
+  height: 55px;
+  font-size: 55px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.inner span{
+  animation:animate 10s ease infinite;
+  position:relative;
+  color:#ff6a00;
+}
+
+@keyframes animate{
+  0%,100%{
+    top:0;
+  }
+  20%{
+    top:0px;
+  }
+  25%{
+    top:-65px;
+  }
+  45%{
+    top:-65px;
+  }
+  50%{
+    top:-130px;
+  }
+  70%{
+    top:-130px;
+  }
+  75%{
+    top:-200px;
+  }
+  90%{
+    top:-200px;
+  }
 }
 
 
@@ -39,8 +114,9 @@ nav a:hover {
 }
 
 .bio {
-  background: red;
+  background: #f9f9f9;
   grid-area: bio;
+  text-align: center;
 }
 
 .portfolio {
