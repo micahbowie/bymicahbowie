@@ -33,12 +33,10 @@ nav a:hover {
 }
 
 
-
 .sidebar {
   background: blue;
   grid-area: sidebar;
 }
-
 
 .bio {
   background: red;
