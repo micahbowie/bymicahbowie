@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 body{
   margin: 0;
@@ -55,11 +57,12 @@ nav a:hover {
 #headshot img {
   width: 270px;
   height: 270px;
+  /* object-fit: contain; */
 }
 
 .outer{
   position: relative;
-  margin-top: 75px;
+  margin-top: 85px;
   margin-left: 25px;
   grid-area: outer;
 }
@@ -77,7 +80,7 @@ nav a:hover {
 .inner span{
   animation:animate 10s ease infinite;
   position:relative;
-  color:#ff6a00;
+  color:#cc5500;
 }
 
 @keyframes animate{
@@ -114,9 +117,23 @@ nav a:hover {
 }
 
 .bio {
-  background: #f9f9f9;
   grid-area: bio;
+  font-size: 18px;
+  padding: 35px;
+  font-family: 'Noto Serif TC', serif;
   text-align: center;
+  color: #adadad;
+}
+
+#text-block {
+  width: 60%;
+  margin: auto;
+}
+
+#text-block h4 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  color: #b8b8b8;
 }
 
 .portfolio {
