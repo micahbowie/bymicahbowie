@@ -8,9 +8,9 @@ body{
 }
 .grid-container {
   display: grid;
-  height: 100vh;
+  height: 100%;
   grid-template-columns: 0.1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.3fr 5fr 1.2fr 0.3fr;
+  grid-template-rows: 0.1fr 1.5fr 1.2fr 0.2fr;
   grid-template-areas:
     "nav nav nav nav"
     "sidebar welcome welcome welcome"
@@ -24,6 +24,7 @@ nav {
   padding: 10px;
   text-align: right;
   grid-area: nav;
+  box-shadow: 0 22px 30px 0 rgba(204, 85, 0, 0.2), 0 6px 20px 0 rgba(204, 85, 0, 0.19);
 }
 
 nav a {
@@ -36,6 +37,8 @@ nav a:hover {
 }
 
 .opening-welcome {
+  margin-top: 50px;
+  margin-bottom: 50px;
   /* background: green; */
   grid-area: welcome;
   font-family:roboto;
@@ -43,12 +46,20 @@ nav a:hover {
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 2fr 2fr 2 fr;
+  grid-template-rows: 0.6fr 2fr 2fr;
   grid-template-areas:
     ". . . . ."
     ". headshot outer outer ."
-    ". . . . .";
+    ". . arrow . .";
   grid-gap: 0rem;
+}
+
+.opening-welcome i {
+  margin-top: 30px;
+  text-align: center;
+  grid-area: arrow;
+  width: 140px;
+  color: #878787;
 }
 
 #headshot{
@@ -126,8 +137,10 @@ nav a:hover {
 }
 
 #text-block {
-  width: 60%;
+  border: 2.5px solid #dedede;
+  width: 80%;
   margin: auto;
+  margin-bottom: 0;
 }
 
 #text-block h4 {
