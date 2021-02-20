@@ -12,11 +12,14 @@ body{
   display: grid;
   height: 100%;
   grid-template-columns: 0.1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.1fr 1.5fr 1.2fr 0.2fr;
+  grid-template-rows: 0.1fr 1.5fr 1.2fr 1.5fr 1.5fr 1.5fr 0.2fr;
   grid-template-areas:
     "nav nav nav nav"
     "sidebar welcome welcome welcome"
     "sidebar bio bio bio"
+    "sidebar art-design art-design art-design"
+    "sidebar videography videography videography"
+    "sidebar dev dev dev"
     "sidebar footer footer footer";
   grid-gap: 0.2rem;
 }
@@ -56,21 +59,12 @@ nav a:hover {
   grid-gap: 0rem;
 }
 
-/* .opening-welcome i {
-  margin-top: 30px;
-  text-align: center;
-  grid-area: arrow;
-  width: 140px;
-  color: #878787;
-} */
-
 #headshot{
   grid-area: headshot;
 }
 #headshot img {
   width: 270px;
   height: 270px;
-  /* object-fit: contain; */
 }
 
 .outer{
@@ -96,6 +90,20 @@ nav a:hover {
   color:#cc5500;
 }
 
+.art-design{
+  margin: 45px;
+  padding: 20px;
+  background: red;
+  grid-area: art-design;
+}
+
+.videography{
+  grid-area: videography;
+}
+
+.dev-container{
+  grid-area: dev;
+}
 @keyframes animate{
   0%,100%{
     top:0;
