@@ -16,21 +16,26 @@ body{
   grid-template-areas:
     "nav nav nav nav"
     "sidebar welcome welcome welcome"
-    "sidebar bio bio bio"
-    "sidebar art-design art-design art-design"
-    "sidebar videography videography videography"
-    "sidebar dev dev dev"
-    "sidebar footer footer footer";
-  grid-gap: 0.2rem;
+    "bio bio bio bio"
+    "art-design art-design art-design art-design"
+    "videography videography videography videography"
+    "dev dev dev dev"
+    "footer footer footer footer";
+  grid-gap: o.2rem;
 }
 
 nav {
+  width: 99%;
+  position: fixed;
   color: #cc5500;
   padding: 10px;
   text-align: right;
   grid-area: nav;
-  box-shadow: 0 22px 30px 0 rgba(204, 85, 0, 0.2), 0 6px 20px 0 rgba(204, 85, 0, 0.19);
+  background-color: white;
+  box-shadow: 0 22px 60px 0 rgba(204, 85, 0, 0.6), 0 6px 40px 0 rgba(204, 85, 0, 0.40);
 }
+
+nav .social-links { display: inline-block;}
 
 nav a {
   margin: 3px;
@@ -93,8 +98,25 @@ nav a:hover {
 .art-design{
   margin: 45px;
   padding: 20px;
-  background: red;
+  /* background: red; */
   grid-area: art-design;
+  display: grid;
+  /* height: 100%; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". title ."
+    "one 2 3"
+    "4 5 6"
+    "7 8 9";
+  grid-gap: 10px;
+}
+
+.art-design h1 {grid-area: title;}
+.art-design-1 {
+  background-image: url('DEMIGOD.jpg');
+  background-size: cover;
+  grid-area: one;
 }
 
 .videography{
