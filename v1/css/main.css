@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 body{
   margin: 0;
@@ -13,10 +14,10 @@ body{
   display: grid;
   height: 100%;
   grid-template-columns: 0.1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.1fr 1.5fr 1.2fr 1.5fr 1.5fr 1.5fr 0.2fr;
+  grid-template-rows: 0.1fr .5fr 1.5fr 1.5fr 1.5fr 1.5fr 0.2fr;
   grid-template-areas:
     "nav nav nav nav"
-    "sidebar welcome welcome welcome"
+    "welcome welcome welcome welcome"
     "bio bio bio bio"
     "art-design art-design art-design art-design"
     "videography videography videography videography"
@@ -41,6 +42,7 @@ nav .social-links { display: inline-block;}
 nav a {
   margin: 3px;
   color: #cc5500;
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -131,36 +133,32 @@ nav a:hover {
   color: #b8b8b8;
 }
 
-
 /* Portfolio Container */
 .portfolio {
   background: pink;
   grid-area: portfolio;
 }
 
+.section-title {
+  margin: 50px;
+  padding: 50px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30PX;
+}
 /* Art & Design */
-.art-design{
-  margin: 45px;
-  padding: 20px;
-  /* background: red; */
-  grid-area: art-design;
+.art-design {
+  margin-top: 100px;
+  padding: 40px;
   display: grid;
-  /* height: 100%; */
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    ". title ."
-    "one 2 3"
-    "4 5 6"
-    "7 8 9";
-  grid-gap: 10px;
+  /* grid-column: repeat(3, minmax(240px, 1fr)); */
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  grid-gap: 9px;
+  grid-row-gap: 0px;
+  justify-content: center;
 }
 
-.art-design h1 {grid-area: title;}
-.art-design-1 {
-  background-image: url('DEMIGOD.jpg');
-  background-size: cover;
-  grid-area: one;
+.grid-box img {
+    width: 100%;
 }
 
 /* Videography */
