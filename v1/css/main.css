@@ -1,3 +1,4 @@
+/* Font imports */
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
@@ -23,7 +24,7 @@ body{
     "footer footer footer footer";
   grid-gap: o.2rem;
 }
-
+/* All NAV stylings */
 nav {
   width: 99%;
   position: fixed;
@@ -46,10 +47,10 @@ nav a:hover {
   color: #ff6a00;
 }
 
+/* Opening Welcome */
 .opening-welcome {
   margin-top: 50px;
   margin-bottom: 50px;
-  /* background: #fafafa; */
   grid-area: welcome;
   font-family:roboto;
 
@@ -95,6 +96,49 @@ nav a:hover {
   color:#cc5500;
 }
 
+@keyframes animate{
+  0%,100%{top:0;}
+  20%{top:0px;}
+  25%{top:-65px;}
+  45%{top:-65px;}
+  50%{top:-130px;}
+  70%{top:-130px;}
+  75%{top:-200px;}
+  90%{top:-200px;}
+}
+
+/* Bio */
+#bio {
+  grid-area: bio;
+  font-size: 18px;
+  padding: 35px;
+  font-family: 'Noto Serif TC', serif;
+  text-align: center;
+  color: #adadad;
+}
+
+#text-block {
+  padding: 20px;
+  border: 2.5px solid #dedede;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 0;
+}
+
+#text-block h4 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 30px;
+  color: #b8b8b8;
+}
+
+
+/* Portfolio Container */
+.portfolio {
+  background: pink;
+  grid-area: portfolio;
+}
+
+/* Art & Design */
 .art-design{
   margin: 45px;
   padding: 20px;
@@ -119,97 +163,21 @@ nav a:hover {
   grid-area: one;
 }
 
+/* Videography */
 .videography{
   grid-area: videography;
 }
 
+/* Dev Projects */
 .dev-container{
   grid-area: dev;
 }
-@keyframes animate{
-  0%,100%{
-    top:0;
-  }
-  20%{
-    top:0px;
-  }
-  25%{
-    top:-65px;
-  }
-  45%{
-    top:-65px;
-  }
-  50%{
-    top:-130px;
-  }
-  70%{
-    top:-130px;
-  }
-  75%{
-    top:-200px;
-  }
-  90%{
-    top:-200px;
-  }
-}
 
 
-.sidebar {
-  font-family: 'Archivo Black', sans-serif;
-  /* background: blue; */
-  grid-area: sidebar;
-  text-align: center;
-}
-.sidebar-links {
-  margin: auto;
-  padding: 0;
-  position: fixed;
-}
-.sidebar h5{
-    -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(-90deg);
-  margin-top: 120px;
-  margin-bottom: 140px;
-  font-size: 18px;
-  padding: 7px;
-  border: 1.5px double #431c00;
-}
-.sidebar a{
-  text-decoration: none;
-  color: #935218;
-}
 
-#bio {
-  grid-area: bio;
-  font-size: 18px;
-  padding: 35px;
-  font-family: 'Noto Serif TC', serif;
-  text-align: center;
-  color: #adadad;
-}
 
-#text-block {
-  padding: 20px;
-  border: 2.5px solid #dedede;
-  width: 80%;
-  margin: auto;
-  margin-bottom: 0;
-}
 
-#text-block h4 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 30px;
-  color: #b8b8b8;
-}
-
-.portfolio {
-  background: pink;
-  grid-area: portfolio;
-}
-
+/* Footer */
 footer {
   padding: 10px;
   font-size: 12px;
