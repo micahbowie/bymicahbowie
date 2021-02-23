@@ -14,7 +14,7 @@ body{
   display: grid;
   height: 100%;
   grid-template-columns: 0.1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.1fr .5fr 1.5fr 1.5fr 1.5fr 1.5fr 0.2fr;
+  grid-template-rows: 0.1fr .2fr 1.5fr 1.5fr 1.5fr 1.5fr 0.2fr;
   grid-template-areas:
     "nav nav nav nav"
     "welcome welcome welcome welcome"
@@ -51,7 +51,7 @@ nav a:hover {
 
 /* Opening Welcome */
 .opening-welcome {
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 50px;
   grid-area: welcome;
   font-family:roboto;
@@ -59,9 +59,8 @@ nav a:hover {
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.6fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas:
-    ". . . . ."
     ". headshot outer outer ."
     ". . arrow . .";
   grid-gap: 0rem;
@@ -150,7 +149,6 @@ nav a:hover {
   margin-top: 100px;
   padding: 40px;
   display: grid;
-  /* grid-column: repeat(3, minmax(240px, 1fr)); */
   grid-template-columns: repeat(3, minmax(240px, 1fr));
   grid-gap: 9px;
   grid-row-gap: 0px;
@@ -162,8 +160,18 @@ nav a:hover {
 }
 
 /* Videography */
-.videography{
-  grid-area: videography;
+.videography {
+  margin-top: 60px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  grid-gap: 9px;
+  grid-row-gap: 30px;
+  justify-content: center;
+}
+.video-container {
+  color: #b36200;
+  font-family: roboto;
 }
 
 /* Dev Projects */
