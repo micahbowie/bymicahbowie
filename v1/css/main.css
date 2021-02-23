@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allan&display=swap');
 
 body{
   margin: 0;
@@ -176,12 +177,35 @@ nav a:hover {
 
 /* Dev Projects */
 .dev-container{
-  grid-area: dev;
+  /* grid-area: dev; */
+  display: flex;
 }
 
+.project-preview img{
+  width: 800px;
+  height: auto;
+  margin: 10px;
+}
+.project-about{
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+.project-about p {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 0;
+}
+.project-about i {margin:10px; text-align: center; color: #cc5500;}
 
-
-
+.project-preview h1 {
+  text-align: left;
+  font-family: 'Allan', cursive;
+  color: #b36200;
+  margin-left: 10px;
+  font-size: 40px;
+}
 
 /* Footer */
 footer {
